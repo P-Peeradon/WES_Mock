@@ -21,3 +21,19 @@ class Unit:
     
     def get_duration(self) -> float:
         return self.__duration
+    
+    def set_unitcode(self, new_unitcode: str) -> None:
+        self.__unitcode = new_unitcode
+    
+    def set_unitname(self, new_unitname: str) -> None:
+        self.__unitname = new_unitname
+    
+    def set_unitdesc(self, new_unitdesc: str) -> None:
+        self.__unitdesc = new_unitdesc
+    
+    def set_credit(self, new_credit: int) -> None:
+        self.__credit = new_credit
+    
+    def set_duration(self, duration: float) -> None:
+        self.__duration = duration
+    
