@@ -52,3 +52,6 @@ class Student():
     
     def set_address(self, new_address: str) -> None:
         self.__address = new_address
+        
+class StudentLogin(Student):
+    pass
