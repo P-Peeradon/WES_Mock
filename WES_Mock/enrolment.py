@@ -11,6 +11,9 @@ class Enrolment:
         self.__semester = semester
         self.__year = year
         
+    def add_unit(self, unit: Unit) -> None:
+        self.__units.append(unit)
+        
     def get_enrol_date(self) -> date: 
         return self.__enrol_date
     
@@ -31,6 +34,14 @@ class Enrolment:
     
     def get_year(self) -> int:
         return self.__year
+    
+    def remove_unit(self, unit: Unit) -> None:
+        for idx in range(len(self.__units)):
+            if self.__units[idx].get_unitcode() == unit.get_unitcode():
+                self.__units()
+                return
+        
+        raise ValueError("Cannot find unit")
     
     def set_enrol_date(self, new_enrol_date: date) -> None: 
         self.__enrol_date = new_enrol_date
