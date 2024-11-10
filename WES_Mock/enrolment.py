@@ -31,3 +31,24 @@ class Enrolment:
     
     def get_year(self) -> int:
         return self.__year
+    
+    def set_enrol_date(self, new_enrol_date: date) -> None: 
+        self.__enrol_date = new_enrol_date
+    
+    def set_units(self, new_units: Unit) -> None:
+        self.__units = new_units
+    
+    def set_specific_units(self, index: int, unit: Unit = Unit()) -> None:
+        if index >= len(self.__units):
+            raise IndexError("Index out of bound")
+        else:
+            self.__units[index] = unit
+    
+    def set_student(self, new_student: Student) -> None:
+        self.__student = new_student
+    
+    def set_semester(self, new_semester: int) -> None:
+        self.__semester = new_semester
+    
+    def set_year(self, new_year: int) -> None:
+        self.__year = new_year
