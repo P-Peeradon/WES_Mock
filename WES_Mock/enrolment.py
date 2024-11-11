@@ -1,5 +1,5 @@
-from student import Student
-from unit import Unit
+from WES_Mock.student import Student
+from WES_Mock.unit import Unit
 from datetime import date
 
 class Enrolment:
