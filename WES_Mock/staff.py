@@ -12,10 +12,11 @@ class Staff:
     payment (float) is the staff payment per month in A$.
     """
     
-    def __init__(self, id: str = "0000-0000-0000-0000", fname: str = "no name", lname: str = "", address: str = "unknown", email: str = "XXX@hotmail.com", payment: float = 0.00):
+    def __init__(self, id: str = "0000-0000-0000-0000", fname: str = "no name", lname: str = "", phone: str = "03XXXXXXXX", address: str = "unknown", email: str = "XXX@hotmail.com", payment: float = 0.00):
         self.__id = id
         self.__fname = fname
         self.__lname = lname
+        self.__phone = phone
         self.__address = address
         self.__email = email
         self.__payment = payment
@@ -28,6 +29,9 @@ class Staff:
     
     def get_lname(self) -> str:
         return self.__lname
+    
+    def get_phone(self) -> str:
+        return self.__phone
     
     def get_address(self) -> str:
         return self.__address
@@ -46,6 +50,9 @@ class Staff:
         
     def set_lname(self, new_lname: str) -> None:
         self.__lname = new_lname
+        
+    def set_phone(self, new_phone: str) -> None:
+        self.__phone = new_phone
     
     def set_address(self, new_address: str) -> None:
         self.__address = new_address
