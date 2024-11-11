@@ -2,21 +2,46 @@ from datetime import date
 import mysql.connector as sql_conn
 
 class Student():
+    
+    """
+    Class that store student data.
+    id (str) is the student ID.
+    fname (str) is the student first name.
+    lname (str) is the student last name.
+    date_of_birth (DOB) is the student date of birth.
+    phone (str) is the student's telephone number.
+    address (str) is the student's address in Australia.
+    """
         
-    def __init__(self, id: str = "00000000", name: str = "no name", date_of_birth: date = date(2000, 1, 1), program: str = "unknown", phone: str = "03XXXXXXXX", email: str = "XXX@hotmail.com", address: str = "unknown"):
+    def __init__(self, id: str = "00000000", fname: str = "no name", lname: str = "", date_of_birth: date = date(2000, 1, 1), program: str = "unknown", phone: str = "03XXXXXXXX", email: str = "XXX@hotmail.com", address: str = "unknown"):
         self.__id = id
-        self.__name = name
+        self.__fname = fname
+        self.__lname = lname
         self.__date_of_birth = date_of_birth
         self.__program = program
         self.__phone = phone
         self.__email = email
         self.__address = address
         
+    """
+        stu_db = sql_conn.connect(
+            host = "",
+            user = "",
+            password = "",
+            database = ""
+        )
+        
+        stu_curr = stu_db.cursor()
+    """
+        
     def get_id(self) -> str:
         return self.__id
     
-    def get_name(self) -> str:
-        return self.__name 
+    def get_fname(self) -> str:
+        return self.__fname 
+    
+    def get_lname(self) -> str:
+        return self.__lname 
     
     def get_date_of_birth(self) -> date:
         return self.__date_of_birth
@@ -36,8 +61,11 @@ class Student():
     def set_id(self, new_id: str) -> None:
         self.__id = new_id
     
-    def set_name(self, new_name: str) -> None:
-        self.__name = new_name
+    def set_fname(self, new_fname: str) -> None:
+        self.__fname = new_fname
+        
+    def set_lname(self, new_lname: str) -> None:
+        self.__lname = new_lname
     
     def set_date_of_birth(self, new_date_of_birth: date) -> None:
         self.__date_of_birth = new_date_of_birth
