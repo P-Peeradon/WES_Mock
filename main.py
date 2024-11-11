@@ -1,6 +1,8 @@
-from WES.student import Student
-from WES.unit import Unit
-from WES.enrolment import Enrolment
+from WES_Mock.student import Student
+from WES_Mock.unit import Unit
+from WES_Mock.enrolment import Enrolment
+import re
+
 
 if __name__ == "__main__":
-    pass
+    print(re.match(r"^[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}$", "0000-0002-6756-6119"))
