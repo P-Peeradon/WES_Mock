@@ -2,7 +2,7 @@ from datetime import date
 
 class Student():
         
-    def __init__(self, id: str = "000000000", name: str = "no name", date_of_birth: date = date(2000, 1, 1), program: str = "unknown", phone: str = "03XXXXXXXX", email: str = "XXX@hotmail.com", address: str = "unknown"):
+    def __init__(self, id: str = "00000000", name: str = "no name", date_of_birth: date = date(2000, 1, 1), program: str = "unknown", phone: str = "03XXXXXXXX", email: str = "XXX@hotmail.com", address: str = "unknown"):
         self.__id = id
         self.__name = name
         self.__date_of_birth = date_of_birth
