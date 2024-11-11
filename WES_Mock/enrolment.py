@@ -4,6 +4,16 @@ from datetime import date
 
 class Enrolment:
     
+    """
+    This class store enrolment data of a student.
+    Field:
+    enrol_date (date) is the date that a student perform enrolment.
+    units (list of Unit) is the array of units which student enrols in that semester.
+    student (Student) is that student's data (Only student id is recorded in enrolment table).
+    semester (integer) is the semester which that student enrol for (If summer semester, use number 3).
+    year (integer) is the academic year that student perform enrolment
+    """
+    
     def __init__(self, enrol_date: date = date(2019, 1, 1), units: Unit = [], student: Student = Student(), semester: int = 1, year: int = 2019):
         self.__enrol_date = enrol_date
         self.__units = units
