@@ -2,7 +2,7 @@ from datetime import date
 
 class Staff:
     
-    def __init__(self, id: str = "", name: str = "no name", address: str = "unknown", email: str = "XXX@hotmail.com", payment: float = 0.00):
+    def __init__(self, id: str = "0000-0000-0000-0000", name: str = "no name", address: str = "unknown", email: str = "XXX@hotmail.com", payment: float = 0.00):
         self.__id = id
         self.__name = name
         self.__address = address
