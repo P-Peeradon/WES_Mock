@@ -2,9 +2,20 @@ from datetime import date
 
 class Staff:
     
-    def __init__(self, id: str = "0000-0000-0000-0000", name: str = "no name", address: str = "unknown", email: str = "XXX@hotmail.com", payment: float = 0.00):
+    """
+    Class that store UTS staff data.
+    id (str) is the staff ID.
+    fname (str) is the staff first name.
+    lname (str) is the staff last name.
+    address (str) is the staff's address in Australia.
+    phone (str) is the student's telephone number.
+    payment (float) is the staff payment per month in A$.
+    """
+    
+    def __init__(self, id: str = "0000-0000-0000-0000", fname: str = "no name", lname: str = "", address: str = "unknown", email: str = "XXX@hotmail.com", payment: float = 0.00):
         self.__id = id
-        self.__name = name
+        self.__fname = fname
+        self.__lname = lname
         self.__address = address
         self.__email = email
         self.__payment = payment
@@ -12,8 +23,11 @@ class Staff:
     def get_id(self) -> str:
         return self.__id
     
-    def get_name(self) -> str:
-        return self.__name
+    def get_fname(self) -> str:
+        return self.__fname
+    
+    def get_lname(self) -> str:
+        return self.__lname
     
     def get_address(self) -> str:
         return self.__address
@@ -27,8 +41,11 @@ class Staff:
     def set_id(self, new_id: str) -> None:
         self.__id = new_id
     
-    def set_name(self, new_name: str) -> None:
-        self.__name = new_name
+    def set_fname(self, new_fname: str) -> None:
+        self.__fname = new_fname
+        
+    def set_lname(self, new_lname: str) -> None:
+        self.__lname = new_lname
     
     def set_address(self, new_address: str) -> None:
         self.__address = new_address
