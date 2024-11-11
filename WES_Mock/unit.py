@@ -1,11 +1,14 @@
+from WES_Mock.staff import Staff
+
 class Unit:
         
-    def __init__(self, unitcode: str = "XXXXXXX", unitname: str = "Unknown", unitdesc: str = "", credit: int = 0, duration: float = 0.0):
+    def __init__(self, unitcode: str = "XXXXXXX", unitname: str = "Unknown", unitdesc: str = "", credit: int = 0, duration: float = 0.0, coordinator: Staff = Staff()):
         self.__unitcode = unitcode
         self.__unitname = unitname
         self.__unitdesc = unitdesc
         self.__credit = credit
         self.__duration = duration
+        self.__coordinator = coordinator
         
     def get_unitcode(self) -> str:
         return self.__unitcode
@@ -22,6 +25,9 @@ class Unit:
     def get_duration(self) -> float:
         return self.__duration
     
+    def gt_coordinator(self) -> Staff:
+        return self.__coordinator
+    
     def set_unitcode(self, new_unitcode: str) -> None:
         self.__unitcode = new_unitcode
     
@@ -36,4 +42,6 @@ class Unit:
     
     def set_duration(self, duration: float) -> None:
         self.__duration = duration
-    
+        
+    def set_coordinator(self, new_coordinator: Staff) -> None:
+        self.__coordinator = new_coordinator
