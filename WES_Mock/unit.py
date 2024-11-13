@@ -1,4 +1,4 @@
-from WES_Mock.staff import Staff
+from staff import Staff
 
 class Unit:
     
@@ -109,7 +109,7 @@ class Unit:
         Method to convert Unit into String.
         return: String representation of Unit (For testing the code).
         """
-        return f"Unit Code: {self.__unitcode} \nName: {self.__unitname} \
+        return f"""Unit Code: {self.__unitcode} \nName: {self.__unitname} \
             \nDescription: {self.__unitdesc} \nCredits: {self.__credit} \
             \nHours per week: {self.__duration} \nCoordinator: {self.__coordinator}
-            "
+            """

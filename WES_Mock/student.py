@@ -147,9 +147,9 @@ class Student():
         Method to convert Student into String.
         return: String representation of Student (For testing the code).
         """
-        return f"id: {self.__id} \nname:{self.__fname + ' ' + self.__lname} \
-            \nDOB: {self.__date_of_birth.strftime('%-d %B %Y')} \nprogram: {self.__program} \n \
-            phone: {self.__phone} \nemail: {self.__email} \naddress: {self.__address}"
+        return f"""id: {self.__id} \nname: {self.__fname + ' ' + self.__lname} \
+            \nDOB: {self.__date_of_birth.strftime('%-d %B %Y')} \nprogram: {self.__program} \
+            \nphone: {self.__phone} \nemail: {self.__email} \naddress: {self.__address}"""
 
 
 
