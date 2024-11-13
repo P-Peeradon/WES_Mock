@@ -91,15 +91,30 @@ class TestStudent(unittest.TestCase):
         stu3.set_address("402 Temple Str, Sydney, NSW 2000")
         
         #After
-        self.assertEqual(stu3.get_id(), "00000000")
-        self.assertEqual(stu3.get_fname(), "no name")
-        self.assertEqual(stu3.get_lname(), "no surname")
-        self.assertEqual(stu3.get_date_of_birth(), date(2000, 1, 1))
-        self.assertEqual(stu3.get_program(), "unknown")
-        self.assertEqual(stu3.get_phone(), "03XXXXXXXX")
-        self.assertEqual(stu3.get_email(), "XXX@hotmail.com")
-        self.assertEqual(stu3.get_address(), "unknown")
+        self.assertEqual(stu3.get_id(), "11802605")
+        self.assertEqual(stu3.get_fname(), "C")
+        self.assertEqual(stu3.get_lname(), "Johnson")
+        self.assertEqual(stu3.get_date_of_birth(), date(2001, 10, 5))
+        self.assertEqual(stu3.get_program(), "Master of Information System")
+        self.assertEqual(stu3.get_phone(), "0480256314")
+        self.assertEqual(stu3.get_email(), "johnson.c@hotmail.com")
+        self.assertEqual(stu3.get_address(), "402 Temple Str, Sydney, NSW 2000")
+
+class TestStaff(unittest.TestCase):
+    
+    def test_Staff_constructor(self):
+        sf1 = Staff("1986-5000-4516-9021", "Several", "Snape", "84 Collins St, Canberra CBD, ACT 2600", "0384752142", "s.snape@uts.edu.au", 1480.50)
+        sf2 = Staff("9547-8021-6021-9458", "David", "Griffindor", "1555/4 Canton Rd, Bondi Beach, NSW 2026", "0472601503", "d.griffindor@uts.edu.au", 2450.00)
+        sf3 = Staff()
         
+        print(sf1)
+        print()
+        print(sf2)
+        print()
+        print(sf3)
+        
+    def test_Staff_getter(self):
+        pass
 
 if __name__ == "__main__":
     unittest.main()

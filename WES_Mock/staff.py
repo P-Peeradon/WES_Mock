@@ -13,7 +13,7 @@ class Staff:
     """
     
     def __init__(self, id: str = "0000-0000-0000-0000", fname: str = "no name", \
-            lname: str = "", phone: str = "03XXXXXXXX", \
+            lname: str = "no surname", phone: str = "03XXXXXXXX", \
             address: str = "unknown", email: str = "XXX@hotmail.com", \
             payment: float = 0.00):
         self.__id = id
@@ -133,4 +133,4 @@ class Staff:
         """
         return f"staff ID: {self.__id} \nname: {self.__fname + ' ' + self.__lname} \
             \nphone: {self.__phone} \naddress: {self.__address} \
-            \nemail: {self.__email} \npayment: A${self.__payment}"
+            \nemail: {self.__email} \npayment: A${self.__payment:.2f}"
