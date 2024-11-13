@@ -105,6 +105,10 @@ class Unit:
         self.__coordinator = new_coordinator
     
     def __str__(self):
+        """
+        Method to convert Unit into String.
+        return: String representation of Unit (For testing the code).
+        """
         return f"Unit Code: {self.__unitcode} \nName: {self.__unitname} \
             \nDescription: {self.__unitdesc} \nCredits: {self.__credit} \
             \nHours per week: {self.__duration} \nCoordinator: {self.__coordinator}
