@@ -114,7 +114,71 @@ class TestStaff(unittest.TestCase):
         print(sf3)
         
     def test_Staff_getter(self):
-        pass
+        sf1 = Staff("1986-5000-4516-9021", "Several", "Snape", "84 Collins St, Canberra CBD, ACT 2600", "0384752142", "s.snape@uts.edu.au", 1480.50)
+        sf2 = Staff("9547-8021-6021-9458", "David", "Griffindor", "1555/4 Canton Rd, Bondi Beach, NSW 2026", "0472601503", "d.griffindor@uts.edu.au", 2450.00)
+        sf3 = Staff()
+        
+        #get ID
+        self.assertEqual(sf1.get_id(), "1986-5000-4516-9021")
+        self.assertEqual(sf2.get_id(), "9547-8021-6021-9458")
+        self.assertEqual(sf3.get_id(), "0000-0000-0000-0000")
+        #get first name
+        self.assertEqual(sf1.get_fname(), "Several")
+        self.assertEqual(sf2.get_fname(), "David")
+        self.assertEqual(sf3.get_fname(), "no name")
+        #get last name
+        self.assertEqual(sf1.get_lname(), "Snape")
+        self.assertEqual(sf2.get_lname(), "Griffindor")
+        self.assertEqual(sf3.get_lname(), "no surname")
+        #get address
+        self.assertEqual(sf1.get_address(), "84 Collins St, Canberra CBD, ACT 2600")
+        self.assertEqual(sf2.get_address(), "1555/4 Canton Rd, Bondi Beach, NSW 2026")
+        self.assertEqual(sf3.get_address(), "unknown")
+        #get phone number
+        self.assertEqual(sf1.get_phone(), "0384752142")
+        self.assertEqual(sf2.get_phone(), "0472601503")
+        self.assertEqual(sf3.get_phone(), "03XXXXXXXX")
+        #get email
+        self.assertEqual(sf1.get_email(), "s.snape@uts.edu.au")
+        self.assertEqual(sf2.get_email(), "d.griffindor@uts.edu.au")
+        self.assertEqual(sf3.get_email(), "XXX@hotmail.com")
+        #get payment
+        self.assertEqual(sf1.get_payment(), 1480.50)
+        self.assertEqual(sf2.get_payment(), 2450.00)
+        self.assertEqual(sf3.get_payment(), 0.00)
+        
+    def test_Staff_setter(self):
+        sf3 = Staff()
+        
+        #before
+        self.assertEqual(sf3.get_id(), "0000-0000-0000-0000")
+        self.assertEqual(sf3.get_fname(), "no name")
+        self.assertEqual(sf3.get_lname(), "no surname")
+        self.assertEqual(sf3.get_address(), "unknown")
+        self.assertEqual(sf3.get_phone(), "03XXXXXXXX")
+        self.assertEqual(sf3.get_email(), "XXX@hotmail.com")
+        self.assertEqual(sf3.get_payment(), 0.00)
+        
+        #call setter method
+        sf3.set_id("1405-9452-1450-7581")
+        sf3.set_fname("Ron")
+        sf3.set_lname("Wesley")
+        sf3.set_address("84 Rosecoe Str, Bondi Beach, NSW 2026")
+        sf3.set_phone("0301154062")
+        sf3.set_email("r.wesley@uts.edu.au")
+        sf3.set_payment(4750.25)
+        
+        #after
+        self.assertEqual(sf3.get_id(), "1405-9452-1450-7581")
+        self.assertEqual(sf3.get_fname(), "Ron")
+        self.assertEqual(sf3.get_lname(), "Wesley")
+        self.assertEqual(sf3.get_address(), "84 Rosecoe Str, Bondi Beach, NSW 2026")
+        self.assertEqual(sf3.get_phone(), "0301154062")
+        self.assertEqual(sf3.get_email(), "r.wesley@uts.edu.au")
+        self.assertEqual(sf3.get_payment(), 4750.25)
+
+class testUnit(unittest.TestCase):
+    pass
 
 if __name__ == "__main__":
     unittest.main()
