@@ -13,14 +13,14 @@ class Staff:
     """
     
     def __init__(self, id: str = "0000-0000-0000-0000", fname: str = "no name", \
-            lname: str = "no surname", phone: str = "03XXXXXXXX", \
-            address: str = "unknown", email: str = "XXX@hotmail.com", \
+            lname: str = "no surname", address: str = "unknown",  \
+            phone: str = "03XXXXXXXX", email: str = "XXX@hotmail.com", \
             payment: float = 0.00):
         self.__id = id
         self.__fname = fname
         self.__lname = lname
-        self.__phone = phone
         self.__address = address
+        self.__phone = phone
         self.__email = email
         self.__payment = payment
     
